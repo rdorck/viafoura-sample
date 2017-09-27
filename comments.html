@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comments</title>
+  
+  <!-- Build Styles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="node_modules/material-design-lite/material.css">
+  <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+</head>
+
+<body>
+  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+      <a href="#overview" class="mdl-tabs__tab is-active" id="btn-philly">Philly.com</a>
+      <a href="#comments-view" class="mdl-tabs__tab" id="btn-viafoura">Viafoura</a>
+    </div>
+  
+    <!--Loading Spinner -->
+    <div class="mdl-spinner mdl-js-spinner is-active" id="loading"></div>
+    
+    <div class="container">
+      <h4></h4>
+    </div>
+    
+    <div class="mdl-tabs__panel is-active" id="overview">
+      <!--Modal Dialog if want Lock look and feel -->
+      <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Signup</h4>
+        
+        <div class="mdl-dialog__content">
+          <!-- Signup Form -->
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="email" />
+              <label class="mdl-textfield__label" for="email">Email</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="password" id="pwd" />
+              <label class="mdl-textfield__label" for="pwd">Password</label>
+            </div>
+          </form>
+  
+          <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect signup-db" id="btn-signup">
+            Signup
+          </a>
+          <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btn-login">
+            Login
+          </a>
+        </div>
+      </dialog>
+      
+      
+      <!--<div class="mdl-card mdl-shadow&#45;&#45;2dp">-->
+        <!--<div class="mdl-card__title">-->
+          <!--<h3 class="mdl-card__title-text">Authentication</h3>-->
+        <!--</div>-->
+        <!---->
+        <!--<div class="mdl-card__supporting-text">-->
+          <!--Here is some supporting text.-->
+        <!--</div>-->
+        <!---->
+        <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+          <!--&lt;!&ndash; Signup Form &ndash;&gt;-->
+          <!--<form action="#">-->
+            <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">-->
+              <!--<input class="mdl-textfield__input" type="text" id="email" />-->
+              <!--<label class="mdl-textfield__label" for="email">Email</label>-->
+            <!--</div>-->
+            <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">-->
+              <!--<input class="mdl-textfield__input" type="password" id="pwd" />-->
+              <!--<label class="mdl-textfield__label" for="pwd">Password</label>-->
+            <!--</div>-->
+          <!--</form>-->
+  <!---->
+          <!--<a href="#" class="mdl-button mdl-button&#45;&#45;raised mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect signup-db" id="btn-signup">-->
+            <!--Signup-->
+          <!--</a>-->
+          <!--<a href="#" class="mdl-button mdl-button&#45;&#45;raised mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect" id="btn-login">-->
+            <!--Login-->
+          <!--</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    
+    <div class="mdl-tabs__panel" id="comments-view">
+      
+      
+      <!-- Viafoura Comment Widget -->
+      <div class="viafoura">
+        <div class="vf-comments vf-widget" data-widget="comments" ></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Build Scripts -->
+  <!-- jQuery -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <!-- Auth0 -->
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <!-- Material Design Lite -->
+  <script src="node_modules/material-design-lite/dist/material.js"></script>
+  <!-- Sweetalert2 -->
+  <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-- Viafoura -->
+  <script type="text/javascript" async src="//cdn.viafoura.net/vf-v2.js"></script>
+  <!-- Custom Scripts -->
+  <script src="auth0-params.js"></script>
+  <script src="src/auth.js"></script>
+  <!-- End Build Scripts -->
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Login</title>
+  
+  <!-- Build Styles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="node_modules/material-design-lite/material.css">
+  <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+</head>
+
+<body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+  <!--Loading Spinner -->
+  <div class="mdl-spinner mdl-js-spinner is-active" id="loading"></div>
+
+  <!-- Navigation Tabs -->
+  <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Authentication</span>
+      <!-- Spacer -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation Tabs -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" id="btn-home">Home</a>
+        <a class="mdl-navigation__link" id="btn-profile">Profile</a>
+        <a class="mdl-navigation__link" id="btn-logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content">
+  
+    <!-- Home View -->
+    <div id="home-view" class="panel panel-default is-active">
+      <div class="panel-heading">
+        <h3>
+          Home
+        </h3>
+        <h4 id="status"></h4>
+        
+        <div class="panel-body">
+          <a class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Login View -->
+    <div id="login-view" class="panel panel-default">
+      <!-- Dialog -->
+      <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">
+          Signup
+        </h4>
+  
+        <div class="mdl-dialog__content">
+          <!-- Signup Form -->
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="email" />
+              <label class="mdl-textfield__label" for="email">Email</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="password" id="pwd" />
+              <label class="mdl-textfield__label" for="pwd">Password</label>
+            </div>
+          </form>
+    
+          <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect signup-db" id="btn-signup">
+            Signup
+          </a>
+    
+          <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btn-login">
+            Login
+          </a>
+        </div>
+      </dialog>
+    </div>
+  
+    <!-- Profile View -->
+    <div id="profile-view" class="panel panel-default profile-area">
+      <div class="panel-heading"><h3>Profile</h3></div>
+      <div class="panel-body">
+        <img class="avatar" alt="avatar">
+        <div>
+          <label><i class="glyphicon glyphicon-user"></i> Nickname</label>
+          <h3 class="nickname"></h3>
+        </div>
+        <pre class="full-profile"></pre>
+      </div>
+    </div>
+  
+    <!-- Comments -->
+    <div id="comments-view" class="panel panel-default">
+      <!-- Viafoura Comment Widget -->
+      <div class="viafoura">
+        <div class="vf-comments vf-widget" data-widget="comments"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Build Scripts -->
+  <!-- jQuery -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <!-- Auth0 -->
+  <script src="node_modules/auth0-js/build/auth0.js"></script>
+  <!-- Material Design Lite -->
+  <script src="node_modules/material-design-lite/dist/material.js"></script>
+  <!-- Sweetalert2 -->
+  <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+  <!-- Bootstrap 4.0.0-beta -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- Popper JS -->
+  <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+  <!-- Viafoura -->
+  <script type="text/javascript" async src="//cdn.viafoura.net/vf-v2.js"></script>
+  <!-- Custom Scripts -->
+  <script src="auth0-params.js"></script>
+  <script src="src/auth.js"></script>
+</body>
+</html>

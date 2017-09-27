@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Auth0 Philly</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="node_modules/material-design-lite/material.css">
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+  </head>
+
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+     <!--Loading Spinner -->
+    <div class="mdl-spinner mdl-js-spinner is-active" id="loading"></div>
+    
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <!-- Empty Header Div; Spacing? -->
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
+        
+        <!-- Page Header Title -->
+        <div class="mdl-layout__header-row">
+          <h2>Sign Up</h2>
+        </div>
+        
+        <!-- Empty Header Div; Spacing? -->
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
+  
+        <!-- Nav Items -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <a href="#overview" class="mdl-layout__tab is-active" id="btn-philly">Philly.com</a>
+          <a href="#comments-view" class="mdl-layout__tab" id="btn-viafoura">Viafoura</a>
+        </div>
+      </header>
+      <!-- END - Page Header -->
+      
+      <main class="mdl-layout__content container">
+        
+        <!-- Overview -->
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <!-- Center Top Card -->
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <!-- Card Img -->
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+              <img src="https://cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png" />
+            </header>
+            
+            <!-- Body, Supporting Text -->
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Authenticate</h4>
+                Please enter your email and password.
+              </div>
+              
+              <div class="mdl-card__actions">
+                <!-- Signup Form -->
+                <form action="#">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="email" />
+                    <label class="mdl-textfield__label" for="email">Email</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" id="pwd" />
+                    <label class="mdl-textfield__label" for="pwd">Password</label>
+                  </div>
+                </form>
+                
+                <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect signup-db" id="btn-signup">
+                  Signup
+                </a>
+                <a href="#" class="mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="btn-login">
+                  Login
+                </a>
+              </div>
+            </div>
+          </section>
+          <!-- END - Top Card -->
+        </div>
+        <!-- END - Overview -->
+        
+        <!-- Comment Card -->
+        <div class="mdl-layout__tab-panel" id="comments-view">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+            
+            </header>
+          
+            <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <!-- Supporting Text -->
+              <div class="mdl-card__supporting-text">
+                <h4>Comments</h4>
+                provided by Viafoura
+              </div>
+              <!-- Actions -->
+              <div class="mdl-card__actions">
+                <!-- Viafoura Comment Widget -->
+                <div class="viafoura">
+                  <div class="vf-comments vf-widget" data-widget="comments" ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- END - Comments Card -->
+        
+      </main>
+    </div>
+    
+    
+    <!-- Buttons -->
+    <!--<div class="content">-->
+      <!--<nav class="navbar navbar-default">-->
+        <!--<div class="container-fluid">-->
+          <!--<div class="navbar-header">-->
+            <!--<a class="navbar-brand" href="#">Auth0 - JavaScript</a>-->
+            <!--<button id="btn-home-view" class="btn btn-primary btn-margin">-->
+              <!--Home-->
+            <!--</button>-->
+            <!---->
+            <!--<button id="btn-login" class="btn btn-primary btn-margin">-->
+              <!--Log In-->
+            <!--</button>-->
+        <!---->
+            <!--<button id="btn-logout" class="btn btn-primary btn-margin">-->
+              <!--Log Out-->
+            <!--</button>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</nav>-->
+      <!---->
+      <!--<main class="container">-->
+        <!--&lt;!&ndash; home view &ndash;&gt;-->
+        <!--<div id="home-view">-->
+          <!--<h4></h4>-->
+        <!--</div>-->
+      <!--</main>-->
+    <!--</div>-->
+    
+    
+
+    <!-- Build External Scripts -->
+    <!-- jQuery -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- Auth0 -->
+    <script src="node_modules/auth0-js/build/auth0.js"></script>
+    <!-- Material Design Lite -->
+    <script src="node_modules/material-design-lite/dist/material.js"></script>
+    <!-- Sweetalert2 -->
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- Bootstrap 4.0.0-beta -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Popper JS -->
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <!-- Viafoura -->
+    <script type="text/javascript" async src="//cdn.viafoura.net/vf-v2.js"></script>
+    <!-- Custom Scripts -->
+    <script src="auth0-params.js"></script>
+    <script src="src/auth.js"></script>
+    <!-- END External Scripts -->
+  </body>
+</html>
